@@ -42,6 +42,7 @@ public class UserService {
         return userRepository.findByUsername(username);
     }
 
+
     public User getUser(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String currentusername = authentication.getName();

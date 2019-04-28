@@ -11,13 +11,7 @@ import java.util.Date;
 @Controller
 public class UserController
 {
-    @RequestMapping({"/index","/"})
-    public String upcomingInterviews()
-    {
 
-        return "index";
-
-    }
 
     @RequestMapping("/uploadresume")
     public String uploadResume(Model model)
