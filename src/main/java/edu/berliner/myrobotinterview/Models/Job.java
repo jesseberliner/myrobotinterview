@@ -18,7 +18,7 @@ public class Job
 
     private Date datePosted;
 
-    private Date dateExpires;
+    private String dateExpires;
 
     private boolean closed;
 
@@ -43,7 +43,8 @@ public class Job
 
     //loaded
 
-    public Job(String title, String description, Date datePosted, Date dateExpires, boolean closed, String hiringManagerEmail, String[] keywords)
+    public Job(String title, String description, Date datePosted, String dateExpires, boolean closed,
+               String hiringManagerEmail, String[] keywords)
     {
         this.title = title;
         this.description = description;
@@ -100,12 +101,12 @@ public class Job
         this.datePosted = datePosted;
     }
 
-    public Date getDateExpires()
+    public String getDateExpires()
     {
         return dateExpires;
     }
 
-    public void setDateExpires(Date dateExpires)
+    public void setDateExpires(String dateExpires)
     {
         this.dateExpires = dateExpires;
     }

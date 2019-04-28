@@ -7,23 +7,24 @@
 </head>
 <body>
 <div th:replace="base :: nav"></div>
-<div class="container text-center" >
-<h1>Welcome to RoboInterview!</h1>
+<div class="container text-center">
+    <h1>Welcome to RoboInterview!</h1>
     <th:block sec:authorize="!isAuthenticated()">
         <a class="btn btn-primary btn-lg" href="/login" role="button">Please log in!</a>
     </th:block>
     <th:block sec:authorize="isAuthenticated()">
         <div class="row">
-        <div class="col-md-6">
-            <h2>Job Seekers</h2>
-        <a class="btn btn-primary btn-lg btn-block" href="/uploadresume" role="button">First, add your resume!</a>
-        <br/>
-        <a class="btn btn-primary btn-lg btn-block" href="/jobs" role="button">Next, view the open jobs!</a>
-        </div>
-        <div class="col-md-6">
-            <h2>Employers</h2>
-            <a class="btn btn-primary btn-lg btn-block" href="/addjob" role="button">Add a job posting!</a>
-        </div>
+            <div class="col-md-6">
+                <h2>Job Seekers</h2>
+                <a class="btn btn-primary btn-lg btn-block" href="/uploadresume" role="button">First, add your
+                    resume!</a>
+                <br/>
+                <a class="btn btn-primary btn-lg btn-block" href="/jobs" role="button">Next, view the open jobs!</a>
+            </div>
+            <div class="col-md-6">
+                <h2>Employers</h2>
+                <a class="btn btn-primary btn-lg btn-block" href="/addjob" role="button">Add a job posting!</a>
+            </div>
         </div>
     </th:block>
 </div>
