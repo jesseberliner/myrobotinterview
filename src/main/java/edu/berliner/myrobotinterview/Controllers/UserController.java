@@ -19,20 +19,5 @@ public class UserController
         return "upload";
     }
 
-    @GetMapping("/addjob")
-    public String addJob(Model model)
-    {
-        model.addAttribute("job", new Job());
-        return "addjob";
-    }
 
-    @PostMapping("/addjob")
-    public String addJobPost(@ModelAttribute("job") Job job,
-                             @RequestParam("dateExpires") String dateExpires,
-                             @RequestParam("keywords") String keywords)
-    {
-        System.out.println(dateExpires);
-        System.out.println(keywords);
-        return "index"; //change to jobs or jobadded
-    }
 }
